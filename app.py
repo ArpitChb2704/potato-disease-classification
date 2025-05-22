@@ -19,7 +19,7 @@ if uploaded_file is not None:
         with st.spinner("Classifying..."):
             # Send image to FastAPI backend
             response = requests.post(
-                "http://localhost:8000/predict",
+                "https://potato-disease-classification-ltgh.onrender.com/predict",
                 files={"file": uploaded_file.getvalue()}
             )
             
